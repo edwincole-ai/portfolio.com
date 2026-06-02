@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Personal Portfolio Website Designs</title>
+
+    <!---box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <!---custom css-->
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <!--header design -->
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!--home secttion design-->
+    <Section class="home" id="home">
+        <div class="home-conent">
+            <h3>Hello, it's Me</h3>
+            <h1>Edwin Christian Cole</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p> A Tech Engineer and Sound Engineer dedicated to precision and performance.
+                With a background in Information Systems and years of experience in professional audio production,
+                I thrive at the intersection of technical logic and creative execution.
+                Whether I’m debugging complex Java applications or capturing the perfect mix in the studio or Front of house my goal is the same:
+                building seamless, high-quality experiences.</p>
+            <div class="social-media">
+    <a href="https://www.facebook.com/share/17mxn2v6zn/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+        <i class='bx bxl-facebook'></i>
+    </a>
+    
+    <a href="https://www.tiktok.com/@eazzi_fix?_r=1&_d=f17fd1la04ml28&sec_uid=MS4wLjABAAAADD3Wwxku0H-8FcgqrfDUJRdJGN9IybTMwjenUWEpDogH-MlYb5totN_yo779mtsb&share_author_id=7267594970469762053&sharer_language=en&source=h5_m&u_code=e9ec9kf73ed0f2&item_author_type=1&utm_source=copy&tt_from=copy&enable_checksum=1&utm_medium=ios&share_link_id=BFE3EB9E-CE52-4B6B-B13C-B1BA6DFB99DA&user_id=7267594970469762053&sec_user_id=MS4wLjABAAAADD3Wwxku0H-8FcgqrfDUJRdJGN9IybTMwjenUWEpDogH-MlYb5totN_yo779mtsb&social_share_type=4&ug_btm=b8727,b0&utm_campaign=client_share&share_app_id=1233" target="_blank" rel="noopener noreferrer">
+        <i class='bx bxl-tiktok'></i>
+    </a>
+    
+    <a href="https://www.instagram.com/eazzi.fix?igsh=MTN1eHlhMDVmN2E4ZQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+        <i class='bx bxl-instagram-alt'></i>
+    </a>
+    
+    <a href="https://wa.me/message/QPVG2SXCDKFEK1" target="_blank" rel="noopener noreferrer">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
+</div>
+           <a href="cv.txt.pdf" class="btn" download>Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="img/profile.png" alt="">
+        </div>
+    </Section>
+
+
+
+    <!--about secttion design-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img/profile.png" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">
+                About <span>Me</span></h2>
+            <h3>Professional Sound Engineer</h3>
+            <p>
+                I'm a Tech Engineer and Sound Engineer based in Freetown. I spend my time at the intersection of Software and Sound,
+                bridging the gap between technical precision and creative flow...
+
+                <span id="moreText" style="display: none; transition: 0.5s;">
+    My journey into engineering didn't start with a keyboard—it started with a mixing console.
+    Working at studios like GenX Music taught me how to manage complex systems under pressure.
+    Whether I’m routing signal flow or debugging a Java servlet, the logic remains the same:
+    identify the bottleneck, optimize the path, and ensure a seamless output.
+  </span>
+            </p>
+
+            <a href="javascript:void(0);" class="btn" id="readMoreBtn" onclick="toggleText()">Read More</a>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <h2 class="heading">Technical <span>Proficiency</span></h2>
+
+        <div class="skills-container">
+            <div class="skills-info">
+                <h3>Bits vs. Beats</h3>
+                <p>My expertise is balanced between logic-driven software development and ear-trained audio engineering.
+                    This chart represents my current technical "footprint" across both industries.</p>
+
+                <div class="skills-legend">
+                    <span class="legend-item"><span class="dot tech"></span> Software Engineering</span>
+                    <span class="legend-item"><span class="dot sound"></span> Sound Engineering</span>
+                </div>
+            </div>
+
+            <div class="chart-wrapper">
+                <canvas id="skillsChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--services secttion design-->
+
+    <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+        <div class="service-container">
+            <div class="services-box">
+                <i class='bx bxl-deezer'></i>
+                <h3>Sound consultancy</h3>
+                <p>I help artists, churches, and studio owners achieve the perfect acoustic environment and a better mix . Sound consultancy isn't just about expensive gear;
+                    it’s about understanding room physics and signal flow. Whether you need an acoustic assessment to reduce noise or a complete digital system overhaul (like Behringer X32 and other digital boards) either indoor or outdoor events
+                    I provide data-driven solutions that ensure your sound is clear, balanced, and professional.</p>
+                <a href="sound-details.html" class="btn">Read More</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bxs-speaker'></i>
+                <h3>software engineering</h3>
+                <p>In today's digital landscape, your software should be as smooth as a well-mixed track.
+                    I specialize in building robust applications using Java, SQL, and modern web technologies.
+                    From designing efficient databases to developing full-stack projects like my 'Exotica Travels'...
+                </p>
+                <a href="tech-details.html" class="btn">Read More</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bxs-chalkboard'></i>
+                <h3>mentorship</h3>
+                <p>Passing on technical knowledge is a passion of mine.
+                    I offer personalized mentorship for aspiring sound engineers and tech enthusiasts.
+                    My approach focuses on hands-on guidance in audio production and software logic...
+                </p>
+                <a href="mentorship-details.html" class="btn">Read More</a>
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--services secttion design-->
+
+
+        <section class="portfolio" id="portfolio">
+            <h2 class="heading">Latest <span>Projects</span></h2>
+
+            <div class="portfolio-filter">
+                <button class="filter-btn active" onclick="filterSelection('all')">All Works</button>
+                <button class="filter-btn" onclick="filterSelection('tech')">Software Engineering</button>
+                <button class="filter-btn" onclick="filterSelection('sound')">Sound Engineering</button>
+            </div>
+
+            <div class="portfolio-container">
+
+                <div class="portfolio-box tech">
+                    <img src="img/exorrica%20tavels.jpeg" alt="Exotica Travels">
+                    <div class="portfolio-layer">
+                        <h4>Exotica Travels</h4>
+                        <p>Full-stack Java application with MySQL integration.</p>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="portfolio-box tech">
+                    <img src="img/database.jpeg" alt="Database Project">
+                    <div class="portfolio-layer">
+                        <h4> Hospital System</h4>
+                        <p>Java-based management tool with optimized SQL queries.</p>
+
+                    </div>
+                </div>
+
+                <div class="portfolio-box sound">
+                    <img src="img/portfolio9.jpeg" alt="Live Sound">
+                    <div class="portfolio-layer">
+                        <h4>FOH Mixing</h4>
+                        <p>Networked audio setup for a 500-seat live venue.</p>
+
+                    </div>
+                </div>
+
+                <div class="portfolio-box sound">
+                    <img src="img/rider.jpg" alt="Live Sound">
+                    <div class="portfolio-layer">
+                        <h4>Rider maker</h4>
+                        <p>Creating Rider</p>
+
+                    </div>
+                </div>
+
+                <div class="portfolio-box sound">
+                    <img src="img/church.jpeg" alt="Live Sound">
+                    <div class="portfolio-layer">
+                        <h4>Church setup</h4>
+                        <p>setting up at a church</p>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+    </section>
+
+
+<!--contact secion design-->
+
+<section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+
+    <form action="#">
+     <div class="input-box">
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="email" id="email" placeholder="Email Address" required>
+</div>
+
+<div class="input-box">
+    <input type="number" id="phone" placeholder="Mobile Number">
+    <input type="text" id="subject" placeholder="Email Subject">
+</div>
+
+<textarea id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+
+<button type="button" class="btn" onclick="sendToWhatsApp()">Send Message</button>
+    </form>
+</section>
+
+
+<!--footer design-->
+
+
+<footer class="footer">
+    <div class="footer-text">
+        <p>Cpoyright &copy; 2026 by Edwin| All Rights Reserved.</p>
+    </div>
+    <div class="footer-IconTop">
+        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+</footer>
+
+<!-- scroll reveal-->
+ <script src="http://unpkg.com/scrollreveal"></script>
+
+ <!-- typed js-->
+
+ <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<!-- custom js-->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
